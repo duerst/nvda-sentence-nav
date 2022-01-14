@@ -176,10 +176,10 @@ class SettingsDialog(SettingsPanel):
 
       # Regex-related edit boxes
         # Translators: Label for sentence breakers edit box
-        self.sentenceBreakersEdit = sHelper.addLabeledControl(_("Sentence breakers"), wx.TextCtrl)
+        self.sentenceBreakersEdit = sHelper.addLabeledControl(_("Skippable punctuation marks"), wx.TextCtrl)
         self.sentenceBreakersEdit.Value = getConfig("sentenceBreakers")
         # Translators: Label for skippable punctuation marks edit box
-        self.skippableEdit = sHelper.addLabeledControl(_("Skippable punctuation marks"), wx.TextCtrl)
+        self.skippableEdit = sHelper.addLabeledControl( _("Skippable punctuation marks"), wx.TextCtrl)
         self.skippableEdit.Value = getConfig("skippable")
         # Translators: Label for full width sentence breakers edit box
         self.fullWidthSentenceBreakersEdit = sHelper.addLabeledControl(_("Full width sentence breakers"), wx.TextCtrl)
@@ -209,7 +209,8 @@ class SettingsDialog(SettingsPanel):
         self.fullWidthPhraseBreakersEdit.Value = getConfig("fullWidthPhraseBreakers")
       # applicationsBlacklist edit
         # Translators: Label for blacklisted applications edit box
-        self.applicationsBlacklistEdit = sHelper.addLabeledControl(_("Disable SentenceNav in applications (comma-separated list)"), wx.TextCtrl)
+        label = _("Disable SentenceNav in applications (comma-separated list)")
+        self.applicationsBlacklistEdit = sHelper.addLabeledControl(label, wx.TextCtrl)
         self.applicationsBlacklistEdit.Value = getConfig("applicationsBlacklist")
       # Enable in MS Word
         # Translators: Checkbox that enables support for MS Word
